@@ -1,0 +1,29 @@
+{
+  "name": "pm2-promise",
+  "version": "0.1.0",
+  "description": "Promised version PM2",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3axap4eHko/pm2-promise.git"
+  },
+  "keywords": [
+    "pm2",
+    "promise"
+  ],
+  "author": "Ivan (3axap4eHko)",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/3axap4eHko/pm2-promise/issues"
+  },
+  "homepage": "https://github.com/3axap4eHko/pm2-promise#readme",
+  "dependencies": {
+    "pm2": "*"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
