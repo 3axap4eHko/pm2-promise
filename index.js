@@ -19,6 +19,7 @@ Object.keys(API.prototype).forEach(name => {
               resolve(value);
             }
           });
+          return method.apply(this, args);
         });
       }
     };
