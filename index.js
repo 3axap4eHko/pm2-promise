@@ -1,12 +1,13 @@
 const API = require('pm2').custom;
 
-Object.keys(API.prototype).forEach(name => {
+const descriptors = Object.getOwnPropertyDescriptors(API.prototype);
 
-  const method = API.prototype[name];
-  // Check if this method is public function
-  if (/^[a-zA-Z]+$/.test(name) && typeof method === 'function') {
+Object.keys(descriptors).forEach(name => {
+  const descriptor = descriptors[name];
+  if (/^[a-z]/.test(name) && typeof descriptor.value === 'function') {
+    const method = descriptor.value;
 
-    API.prototype[name] = function (...args) {
+    descriptor.value = function (...args) {
       // If last argument is function then we have callback
       if (typeof args[args.length - 1] === 'function') {
         return method.apply(this, args);
@@ -20,9 +21,13 @@ Object.keys(API.prototype).forEach(name => {
             }
           });
           return method.apply(this, args);
+        }).catch(error => {
+          console.error(error);
+          throw error;
         });
       }
     };
+    Object.defineProperty(API.prototype, name, descriptor);
   }
 });
 
