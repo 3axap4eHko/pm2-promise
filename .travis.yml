@@ -2,10 +2,13 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - "8"
-notifications:
-  on_success: never
-  on_failure: always
-before_install:
-  - nvm install 8
+  - "12"
+  - "14"
+
 script: npm run test
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+

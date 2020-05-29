@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/3axap4eHko/pm2-promise#readme",
   "dependencies": {
-    "pm2": "^3.0.0"
+    "pm2": "^4.4.0"
   },
   "devDependencies": {
-    "babel-jest": "^23.4.0",
-    "jest": "^23.4.1"
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1"
   }
 }
