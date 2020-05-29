@@ -1,6 +1,6 @@
 {
   "name": "pm2-promise",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Promised version PM2",
   "main": "index.js",
   "scripts": {
